@@ -1,0 +1,21 @@
+[multiform "PrimeiraEtapa"]
+<div class="tes"></div>
+Nome
+[text* nome id:nome class:fieldtext placeholder "Nome"]  
+
+Sobrenome
+[text* sobrenome id:sobrenome class:fieldtext placeholder "sobrenome"]
+
+E-Mail
+[email* email id:email class:fieldtext placeholder "seu@email.com"]
+
+Empresa.
+[text* empresa id:empresa class:fieldtext placeholder "Empresa"]
+
+WhatsApp (é por aqui que enviaremos seu orçamento)
+[intl_tel* whatsapp id:whatsapp  class:fieldtext preferredCountries:br]
+
+
+[submit "Próximo >>" class:proximo-btn]
+
+[multistep PrimeiraEtapa first_step skip_save "/planos-e-precos-2/"]

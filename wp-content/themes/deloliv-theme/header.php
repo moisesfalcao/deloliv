@@ -25,6 +25,15 @@
                   <ul>
                     <li><a class="close" href="#">X Close</a></li>
 
+                    <li class="lang-mobile">
+                      <ul>
+                      <li class="lang"><a class="lang <?php if($_SESSION['LANG']=='EN'){ echo 'active'; } ?>" href="<?php echo get_permalink(); ?>?LANG=EN">EN</a></li>
+                      <li class="lang"><a class="lang <?php if($_SESSION['LANG']=='FR'){ echo 'active'; } ?>" href="<?php echo get_permalink(); ?>?LANG=FR">FR</a></li>
+                      <li class="lang"><a class="lang <?php if($_SESSION['LANG']=='ES'){ echo 'active'; } ?>" href="<?php echo get_permalink(); ?>?LANG=ES">ES</a></li>
+                      <li class="lang"><a class="lang <?php if($_SESSION['LANG']=='PT'){ echo 'active'; } ?>" href="<?php echo get_permalink(); ?>?LANG=PT">PT</a></li>
+                      </ul>
+                    </li>
+
                     <?php if($_SESSION['LANG']=='EN'){ ?>
                       <?php wp_nav_menu( array( 'theme_location' => 'en-menu' ) ); ?>
                     <?php } ?>

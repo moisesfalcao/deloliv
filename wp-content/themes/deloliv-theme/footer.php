@@ -33,6 +33,44 @@
         </div>
       </footer>
     </div>
+    <div class="footer-mobile">
+    <footer>
+        
+        <div class="sobre">
+          <div class="wrapper">
+
+            <?php if($_SESSION['LANG']=='EN'){ ?>
+              <?php dynamic_sidebar( 'home_footer_en' ); ?>
+            <?php } ?>
+
+            <?php if($_SESSION['LANG']=='FR'){ ?>
+              <?php dynamic_sidebar( 'home_footer_fr' ); ?>
+            <?php } ?>
+
+            <?php if($_SESSION['LANG']=='ES'){ ?>
+              <?php dynamic_sidebar( 'home_footer_es' ); ?>
+            <?php } ?>
+
+            <?php if($_SESSION['LANG']=='PT'){ ?>
+              <?php dynamic_sidebar( 'home_footer_pt' ); ?>
+            <?php } ?>
+           
+          </div>
+
+          <address>
+          <div class="wrapper">
+            <ul>
+              <li class="arroba"><i class="icone arroba"></i></li>
+              <li>
+                <i class="icone location"></i>
+                <p>5 avenue Dubé, Montreal, <br />QC H1B4W5, Canada</p>
+              </li>
+            </ul>
+          </div>
+        </address>
+        </div>
+      </footer>
+    </div>
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&display=swap"
       rel="stylesheet"

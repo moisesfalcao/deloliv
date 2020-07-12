@@ -7,7 +7,7 @@
           <div class="discovery">
               <p><?php echo get_field('en_discovery_text_box'); ?></p>
             <div class="arrow"></div>
-            <a href="#"><?php echo get_field('en_discovery_text_button'); ?></a>
+            <a href="<?php echo get_site_url(); ?>/services"><?php echo get_field('en_discovery_text_button'); ?></a>
           </div>
 
           <?php } ?>
@@ -23,7 +23,7 @@
           <div class="discovery">
               <p><?php echo get_field('fr_discovery_text_box'); ?></p>
             <div class="arrow"></div>
-            <a href="#"><?php echo get_field('fr_discovery_text_button'); ?></a>
+            <a href="<?php echo get_site_url(); ?>/services"><?php echo get_field('fr_discovery_text_button'); ?></a>
           </div>
 
           <?php } ?>
@@ -39,7 +39,7 @@
           <div class="discovery">
               <p><?php echo get_field('es_discovery_text_box'); ?></p>
             <div class="arrow"></div>
-            <a href="#"><?php echo get_field('es_discovery_text_button'); ?></a>
+            <a href="<?php echo get_site_url(); ?>/services"><?php echo get_field('es_discovery_text_button'); ?></a>
           </div>
 
           <?php } ?>
@@ -55,7 +55,7 @@
           <div class="discovery">
               <p><?php echo get_field('pt_discovery_text_box'); ?></p>
             <div class="arrow"></div>
-            <a href="#"><?php echo get_field('pt_discovery_text_button'); ?></a>
+            <a href="<?php echo get_site_url(); ?>/services"><?php echo get_field('pt_discovery_text_button'); ?></a>
           </div>
 
           <?php } ?>

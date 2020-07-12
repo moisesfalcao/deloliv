@@ -17,7 +17,7 @@ body {
   background-size: 110%;
 }
 
-.deloliv {
+body.home .deloliv {
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -51,6 +51,20 @@ p {
     padding-top: 20px;
   }
 }
+
+.header-geral nav ul .lang-mobile {
+  display: none;
+}
+@media (max-width: 500px) {
+  .header-geral nav ul .lang-mobile {
+    display: block;
+    position: absolute;
+    right: 50%;
+    margin-right: -125px !important;
+    top: 0;
+  }
+}
+
 .header-geral nav ul {
   display: flex;
   align-items: center;
@@ -65,6 +79,16 @@ p {
   }
   li.lang {
     display: none !important;
+  }
+  .lang-mobile ul {
+    flex-direction: row !important;
+  }
+  .lang-mobile li.lang {
+    display: block !important;
+  }
+
+  .header-geral .overlay .layermenu ul .lang-mobile li a {
+    font-size: 20px;
   }
 }
 
@@ -113,6 +137,7 @@ p {
   background: #20a9a8 url(linhas.png) no-repeat;
   opacity: 0;
   transition: opacity 0.5s, width 0.5s;
+  overflow: hidden;
 }
 .header-geral .overlay.active .layermenu {
   width: 50vw;
@@ -136,6 +161,12 @@ p {
   margin: 4.5vh 0;
   text-align: right;
   width: 250px;
+}
+@media (max-width: 500px) {
+  .header-geral .overlay .layermenu ul li.lang-mobile li {
+    padding: 0;
+    margin: 0;
+  }
 }
 .header-geral .overlay .layermenu ul li a.close {
   background: url(close.png) no-repeat;
@@ -165,6 +196,12 @@ main {
 @media (max-width: 1366px) {
   main {
     width: 90%;
+  }
+}
+@media (max-width: 500px) {
+  main {
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -209,6 +246,11 @@ main.home {
   opacity: 0;
   transition: opacity 2s;
 }
+@media (max-width: 500px) {
+  .overview {
+    width: 100%;
+  }
+}
 .overview p {
   font-size: 24px;
 }
@@ -222,6 +264,21 @@ main.home {
   }
 }
 
+@media (max-width: 500px) {
+  .overview h1 {
+    font-size: 40px;
+    padding-top: 40px;
+  }
+}
+@media (max-width: 360px) {
+  .overview h1 {
+    font-size: 25px;
+  }
+  .overview p {
+    font-size: 14px;
+  }
+}
+
 .project-nav {
   display: flex;
   align-items: center;
@@ -229,7 +286,12 @@ main.home {
   position: relative;
   width: 50%;
 }
-
+@media (max-width: 500px) {
+  .project-nav {
+    width: 100%;
+    padding-bottom: 50px;
+  }
+}
 .project-nav .item {
   width: 100%;
   position: absolute;
@@ -237,6 +299,18 @@ main.home {
   opacity: 0;
   transition: opacity 2s;
   width: 420px;
+}
+@media (max-width: 1024px) {
+  .project-nav .item {
+    top: 27%;
+    width: 400px;
+  }
+}
+@media (max-width: 768px) {
+  .project-nav .item {
+    top: 21%;
+    width: 280px;
+  }
 }
 .project-nav .item.active {
   opacity: 1;
@@ -247,6 +321,17 @@ main.home {
   padding-left: 100px;
   text-align: right;
 }
+@media (max-width: 1024px) {
+  .project-nav .infos {
+    padding-left: 0;
+  }
+}
+@media (max-width: 500px) {
+  .project-nav .infos {
+    text-align: left;
+  }
+}
+
 .project-nav h2 {
   font-size: 24px;
   margin: 0;
@@ -282,6 +367,11 @@ main.standard {
   max-width: 1040px;
   height: auto;
   margin-top: 120px;
+}
+@media (max-width: 500px) {
+  main.standard {
+    margin-top: 70px;
+  }
 }
 main.standard h1 {
   font-size: 30px;
@@ -356,6 +446,12 @@ main.standard .discovery a {
   align-items: flex-end;
   margin-bottom: 63px;
 }
+@media (max-width: 768px) {
+  .services-list ul li {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
 .services-list ul li figure {
   width: 44%;
   margin: 0;
@@ -363,13 +459,41 @@ main.standard .discovery a {
   padding: 0;
   position: relative;
 }
-
+@media (max-width: 1024px) {
+  .services-list ul li figure {
+    width: 30%;
+  }
+}
+@media (max-width: 768px) {
+  .services-list ul li figure {
+    width: 100%;
+  }
+}
+.services-list ul li figure img {
+  width: 100%;
+  height: auto;
+}
 .services-list ul li figure figcaption {
   position: absolute;
   top: 0;
   right: -12%;
   font-size: 64px;
   font-weight: 700;
+}
+@media (max-width: 1024px) {
+  .services-list ul li figure figcaption {
+    font-size: 35px;
+  }
+}
+@media (max-width: 768px) {
+  .services-list ul li figure figcaption {
+    position: absolute;
+    top: -35px;
+    right: 0;
+    font-size: 43px;
+    text-align: left;
+    width: 95%;
+  }
 }
 
 .services-list ul li p {
@@ -378,6 +502,17 @@ main.standard .discovery a {
   padding: 0;
   font-size: 15px;
   line-height: 28px;
+}
+@media (max-width: 1024px) {
+  .services-list ul li p {
+    width: 60%;
+  }
+}
+@media (max-width: 768px) {
+  .services-list ul li p {
+    width: 90%;
+    margin: 0 auto;
+  }
 }
 .services-list ul li p em {
   font-size: 20px;
@@ -444,6 +579,13 @@ form textarea {
   line-height: 60px;
   font-size: 16px;
 }
+@media (max-width: 500px) {
+  .wpcf7-submit {
+    float: none;
+    margin: 0 auto;
+    display: block;
+  }
+}
 
 /* /Contact Us */
 footer {
@@ -454,6 +596,17 @@ footer {
   align-items: flex-end;
   z-index: 1;
 }
+div.footer-mobile footer {
+  display: none;
+}
+@media (max-width: 500px) {
+  footer {
+    display: none;
+  }
+  div.footer-mobile footer {
+    display: block;
+  }
+}
 body.home footer {
   overflow: hidden;
 }
@@ -462,6 +615,10 @@ footer address {
   display: flex;
   justify-content: flex-end;
   width: 50%;
+}
+@media (max-width: 500px) {
+  footer address {
+  }
 }
 
 footer address .wrapper {
@@ -474,6 +631,11 @@ footer address .wrapper {
   footer address .wrapper {
     padding: 30px 30px 30px 0;
     max-width: 600px;
+  }
+}
+@media (max-width: 1366px) {
+  footer address .wrapper {
+    padding: 30px 30px 30px 30px;
   }
 }
 footer address ul {
@@ -510,10 +672,23 @@ footer address p {
   font-size: 14px;
   margin-left: 10px;
 }
-footer .sobre {
+body.home footer .sobre {
   width: 50%;
   background: rgba(35, 128, 77, 0.8);
   opacity: 0;
+}
+@media (max-width: 500px) {
+  body.home footer .sobre {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+footer .textwidget {
+  display: none;
+}
+body.home footer .textwidget {
+  display: block;
 }
 
 body.home footer .sobre {
@@ -533,6 +708,11 @@ footer .sobre h4 {
   footer .sobre .wrapper {
     max-width: 600px;
     padding: 50px 0 50px 60px;
+  }
+}
+@media (max-width: 1366px) {
+  footer .sobre .wrapper {
+    padding: 50px 60px 50px 60px;
   }
 }
 footer .sobre p {
@@ -555,4 +735,26 @@ footer .sobre p em {
 
 footer .sobre .wrapper p {
   font-weight: 300;
+}
+
+/* footer mob */
+.footer-mobile footer .sobre {
+  width: 100%;
+}
+.footer-mobile footer .sobre .wrapper {
+  width: 90%;
+  padding: 40px 0;
+  margin: 0 auto;
+}
+.footer-mobile footer address {
+  width: 100%;
+}
+
+.footer-mobile footer address .wrapper {
+  padding-top: 0;
+}
+@media (max-width: 360px) {
+  .footer-mobile footer .sobre .wrapper {
+    width: 90%;
+  }
 }
